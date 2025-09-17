@@ -3,7 +3,7 @@
 
 <p align='justify'><strong>Mito</strong> UI is a modern UI component library built with TypeScript, designed for developers building the next generation of web and mobile applications. Beyond offering sleek, flexible, and production-ready components, Mito UI proffers <strong>AI-ready components</strong>—tailored for AI-driven experiences (e.g., conversational interfaces, data-rich dashboards, agent-powered applications, etc.) and engineered to work seamlessly with AI agents.</p>
 
-## Private Repository (Access available upon request) 🔐
+## Private Monorepository (Access available upon request) 🔐
 <a href="https://www.github.com/emeraldemperaur/mito-ui" target="_blank">Mito UI Repository</a>
 
 ## Quick Start
