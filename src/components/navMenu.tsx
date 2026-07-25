@@ -24,8 +24,8 @@ const NavigationMenu = () => {
             <label htmlFor="close-btn" className="btn close-btn"><i className="fas fa-times"></i></label>
             <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="documentation">Documentation</NavLink></li>
             <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="components">Components</NavLink></li>
-            <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="store">Pricing</NavLink></li>
-            <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="about">About</NavLink></li>
+            <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="mito-mcp">Mito MCP</NavLink></li>
+            <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="raison-detre">Raison D'être</NavLink></li>
             <li><NavLink style={({ isActive }) => isActive ? {background:'#000000', color: '#ffffff'} : {}} to="learn">Learn</NavLink></li>
             <li>
             <a href='https://www.github.com/emeraldemperaur/mito-ux' target='_blank'  className="desktop-item"><i className="header-menu-icon fa-brands fa-github"></i></a>

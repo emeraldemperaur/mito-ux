@@ -1,12 +1,12 @@
 import TitleSection from '../components/titleSection';
 import '../styles/main.scss';
 
-const DigitalStore = () => {
+const MitoMCP = () => {
     return(
         <>
-            <TitleSection title="Pricing"/>
+            <TitleSection title="Mito MCP"/>
         </>
     )
 }
 
-export default DigitalStore;
+export default MitoMCP;

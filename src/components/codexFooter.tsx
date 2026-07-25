@@ -16,7 +16,6 @@ const CodexFooter = () => {
     .div
       .footer
         .bubbles
-          //- Small numbers look nice too
           - const bubbles = Array.from({ length: 128 })
           each _, i in bubbles
             - const size = 2 + Math.random() * 4
@@ -32,8 +31,8 @@ const CodexFooter = () => {
               b Useful Links
               NavLink(to="/getting-started" style={fontWeight: '300 !important'}) Getting Started
               NavLink(to="/faqs" style={fontWeight: '300 !important'}) FAQs
-              NavLink(to="/components" style={fontWeight: '300 !important'}) UI Components
-              NavLink(to="/ai-components" style={fontWeight: '300 !important'}) AI Components
+              NavLink(to="/components" style={fontWeight: '300 !important'}) AI Components
+              NavLink(to="/mito-mcp" style={fontWeight: '300 !important'}) Mito MCP
             div
               b Resources
               NavLink(to="/documentation" style={fontWeight: '300 !important'}) Documentation
@@ -48,10 +47,10 @@ const CodexFooter = () => {
               a(href="https://www.nextjs.org/" target="_blank" style={fontWeight: '300 !important'}) Next.js
             div
               b Technologies
-              a(href="https://www.replit.com/" target="_blank" style={fontWeight: '300 !important'}) Replit
+              a(href="https://cursor.com/home" target="_blank" style={fontWeight: '300 !important'}) Cursor
               a(href="https://www.windsurf.com/" target="_blank" style={fontWeight: '300 !important'}) Windsurf
               a(href="https://www.devin.ai/" target="_blank" style={fontWeight: '300 !important'}) Cognition
-              a(href="https://firefly.adobe.com" target="_blank" style={fontWeight: '300 !important'}) Adobe Firefly
+              a(href="https://www.replit.com/" target="_blank" style={fontWeight: '300 !important'}) Replit
           div
             - const imgStyle = { width: '80px', height: '80px', marginLeft: '23px' }
             p(style={fontFamily: 'Mozilla Headline', fontWeight: 500, letterSpacing: '0.13em', marginBottom: '6px' }) ©${getCopyrightYear()} BUILD BY

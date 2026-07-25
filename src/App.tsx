@@ -5,7 +5,6 @@ import NavigationMenu from "./components/navMenu";
 import { Route, Routes } from "react-router-dom";
 import MaisonBase from './pages/maisonBaseView';
 import Documentation from './pages/documentationView';
-import DigitalStore from './pages/digitalStoreView';
 import RaisonDetre from './pages/raisonDetreView';
 import AboutDeveloper from './pages/aboutDevView';
 import LearnMore from './pages/learnMoreView';
@@ -15,6 +14,7 @@ import AIComponents from './pages/aiComponentView';
 import AgenticAI from './pages/agenticAIView';
 import UIComponents from './pages/uiComponentView';
 import CodexFooter from "./components/codexFooter";
+import MitoMCP from "./pages/mcpServerView";
 
 
 
@@ -34,9 +34,9 @@ function App() {
         <Route path='/' element={<MaisonBase/>}/>
         <Route path='documentation' element={<Documentation/>}/>
         <Route path='components' element={<UIComponents/>}/>
-        <Route path='store' element={<DigitalStore/>}/>
+        <Route path='mito-mcp' element={<MitoMCP/>}/>
         <Route path='mito-imperative' element={<RaisonDetre/>}/>
-        <Route path='about' element={<AboutDeveloper/>}/>
+        <Route path='raison-detre' element={<AboutDeveloper/>}/>
         <Route path='learn' element={<LearnMore/>}/>
         <Route path='getting-started' element={<GettingStarted/>}/>
         <Route path='faqs' element={<FAQs/>}/>
