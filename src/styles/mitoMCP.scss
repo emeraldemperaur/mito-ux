@@ -1,0 +1,229 @@
+.mcp-page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 24px 160px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.mcp-hero-section {
+  text-align: center;
+  
+  .mcp-lead-text {
+    font-size: 1.5rem;
+    color: #dedede;
+    line-height: 1.5;
+    margin: 40px auto 24px auto;
+    font-weight: 400;
+  }
+  
+  .mcp-sub-text {
+    font-size: 1.125rem;
+    color: #888888;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.transport-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.transport-card {
+  background: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px;
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .transport-icon {
+    width: 56px;
+    height: 56px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #5E5CE6;
+    margin-bottom: 24px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+  }
+
+  p {
+    color: #888888;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+.architecture-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  .arch-item {
+    padding: 32px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    h4 {
+      font-size: 1.25rem;
+      color: #ffffff;
+      margin: 0 0 12px 0;
+      font-weight: 500;
+    }
+    p {
+      color: #888888;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+}
+
+
+.mcp-pricing-section {
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-card-surface {
+  background: rgba(10, 10, 12, 0.6);
+  border: 1px solid rgba(122, 115, 255, 0.2);
+  border-radius: 24px;
+  padding: 56px;
+  backdrop-filter: blur(20px);
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(122, 115, 255, 0.1) inset;
+  
+  .pricing-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(122, 115, 255, 0.1);
+    color: #7a73ff;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+    font-weight: 600;
+  }
+
+  p {
+    color: #888888;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+  }
+
+  .pricing-cost {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 8px;
+
+    .currency { font-size: 1.5rem; color: #888888; margin-top: 12px; }
+    .amount { font-size: 5rem; font-weight: 700; color: #ffffff; line-height: 1; letter-spacing: -0.04em; }
+  }
+
+  .pricing-terms {
+    font-size: 0.875rem;
+    color: #555555;
+    margin-bottom: 40px;
+  }
+
+  .pricing-action {
+    .buy-btn {
+      display: inline-block;
+      width: 100%;
+      text-decoration: none;
+      padding: 20px 32px;
+      font-size: 1.125rem;
+      border-radius: 100px;
+      box-sizing: border-box;
+      
+      background: #ffffff;
+      color: #000000;
+      border: 1px solid #ffffff;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      
+      &:hover { transform: scale(1.02); }
+    }
+  }
+}
+
+
+body.light-mode {
+  .mcp-lead-text { color: #111111; }
+  .mcp-sub-text { color: #555555; }
+  
+  .transport-card {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.08);
+    
+    h3 { color: #111111; }
+    p { color: #555555; }
+    
+    .transport-icon {
+      background: rgba(122, 115, 255, 0.05);
+      border-color: rgba(122, 115, 255, 0.2);
+    }
+    
+    &:hover { border-color: rgba(0, 0, 0, 0.15); }
+  }
+
+  .architecture-grid .arch-item {
+    border-color: rgba(0, 0, 0, 0.08);
+    h4 { color: #111111; }
+    p { color: #555555; }
+  }
+
+  .pricing-card-surface {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    h2 { color: #111111; }
+    p { color: #555555; }
+    
+    .pricing-cost .amount { color: #111111; }
+    .pricing-terms { color: #666666; }
+
+    .pricing-action .buy-btn {
+      background: #111111;
+      color: #ffffff;
+      border-color: #111111;
+      &:hover { background: #000000; }
+    }
+  }
+}

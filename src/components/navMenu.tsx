@@ -1,10 +1,10 @@
 import { NavLink, useNavigate  } from 'react-router-dom';
 import '../styles/main.scss';
+import BlobLogo from './blobLogo';
 
-const NavigationMenu = () => {
-    const navigator = useNavigate();
-    const homeNavigator = () => { navigator('/') };
-
+const NavigationMenu = ({ isDarkMode, toggleTheme }: { isDarkMode?: boolean, toggleTheme?: () => void }) => {
+    //const navigator = useNavigate();
+    //const homeNavigator = () => { navigator('/') };
 
     return(
     <>
@@ -13,9 +13,9 @@ const NavigationMenu = () => {
         <nav>
         <div className="wrapper">
             <div className="logo">
-                <span onClick={homeNavigator} className='logo-mito-symbol'>&#1421;</span>
                 <NavLink to="/">
-                <span className='logo-mito-text'>Mito</span> <span className='logo-ui-text'>UI</span>
+                    <BlobLogo width="60px" height="60px" color="#000000" />
+                    <span className='logo-mito-text'>Mito</span> <span className='logo-ui-text'>UI</span>
                 </NavLink>
             </div>
             <input type="radio" name="slider" id="menu-btn"/>
@@ -31,7 +31,9 @@ const NavigationMenu = () => {
             <a href='https://www.github.com/emeraldemperaur/mito-ux' target='_blank'  className="desktop-item"><i className="header-menu-icon fa-brands fa-github"></i></a>
             </li>
             <li>
-            <a  className="desktop-item"><i className="header-menu-icon fa-regular fa-moon"></i></a>
+            <a onClick={toggleTheme} className="desktop-item" style={{ cursor: 'pointer' }}>
+                <i className={`header-menu-icon fa-regular ${isDarkMode ? 'fa-lightbulb' : 'fa-moon'}`}></i>
+            </a>
             </li>
             </ul>
             <label htmlFor="menu-btn" className="btn menu-btn"><i className="mobile-menu-icon fas fa-bars"></i></label>
@@ -39,11 +41,8 @@ const NavigationMenu = () => {
         </nav>
         </div>
         </>
-    
-    
     </>
     )
-
 }
 
 export default NavigationMenu;

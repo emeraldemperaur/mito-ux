@@ -4,11 +4,13 @@ body {
         --footer-background:#000000;
         display:grid;
         position: absolute !important;
-        //bottom:0 !important;
-        width:100%;
+        width: 100%;
         grid-area: footer;
         min-height:12rem;
-        overflow-x: clip;
+        
+        /* RESTORED: Clips horizontal scroll but allows bubbles to float vertically */
+        overflow-x: clip; 
+        
         .bubbles {
             position: absolute;
             top:0;
@@ -27,6 +29,7 @@ body {
                 transform:translate(-50%, 100%);
             }
         }
+        
         .content {
             z-index: 2;
             display:grid;
@@ -34,10 +37,19 @@ body {
             grid-gap: 4rem;
             padding:2rem;
             background:var(--footer-background);
+            box-sizing: border-box; /* Crucial: Prevents padding from breaking 100% width */
+
+            @media (max-width: 900px) {
+                grid-template-columns: 1fr; /* Stack into 1 column on mobile */
+                grid-gap: 2rem;
+                text-align: center;
+            }
+
             a, p {
                 color:#F5F7FA;
                 text-decoration:none;
                 font-weight: 300;
+                font-family: 'Quicksand', -apple-system, sans-serif;
             }
             b {
                 color:white;
@@ -46,23 +58,41 @@ body {
                 margin:0;
                 font-size:.75rem;
             }
+            
             >div {
                 display:flex;
                 flex-direction:column;
                 justify-content: center;
+
+                @media (max-width: 900px) {
+                    align-items: center; /* Center groups on mobile */
+                }
+
                 >div {
                     margin:0.25rem 0;
+                    display: flex;
+                    flex-wrap: wrap; /* Allows links to naturally wrap on small screens */
+                    align-items: center;
+                    
+                    @media (max-width: 900px) {
+                        justify-content: center;
+                        gap: 12px; /* Uniform spacing for wrapped links */
+                    }
+
                     >* {
                         margin-right:.5rem;
+                        
+                        @media (max-width: 900px) {
+                            margin-right: 0; /* Clear right margin so flex-gap handles spacing */
+                        }
                     }
                 }
-                .image {
-                    align-self: center;
-                    width:4rem;
-                    height:4rem;
-                    margin:0.25rem 0;
-                    background-size: cover;
-                    background-position: center;
+            }
+
+            .footer-branding {
+                @media (max-width: 900px) {
+                    align-items: center;
+                    margin-top: 1rem;
                 }
             }
         }
@@ -79,6 +109,7 @@ body {
         height:0rem;
     }
 }
+
 @keyframes bubble-move {
     0% {
         bottom:-4rem;
@@ -87,4 +118,3 @@ body {
         bottom:var(--distance, 10rem);
     }
 }
-

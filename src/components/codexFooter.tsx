@@ -6,9 +6,7 @@ import devLogoWhite from '../assets/me-dev-logo-white.png';
 // @ts-expect-error -- used inside pug template after babel-plugin-transform-react-pug
 import { NavLink } from 'react-router-dom';
 
-
 declare function pug(strings: TemplateStringsArray, ...args: any[]): any;
-
 
 const CodexFooter = () => {
 
@@ -51,9 +49,11 @@ const CodexFooter = () => {
               a(href="https://www.windsurf.com/" target="_blank" style={fontWeight: '300 !important'}) Windsurf
               a(href="https://www.devin.ai/" target="_blank" style={fontWeight: '300 !important'}) Cognition
               a(href="https://www.replit.com/" target="_blank" style={fontWeight: '300 !important'}) Replit
-          div
-            - const imgStyle = { width: '80px', height: '80px', marginLeft: '23px' }
-            p(style={fontFamily: 'Mozilla Headline', fontWeight: 500, letterSpacing: '0.13em', marginBottom: '6px' }) ©${getCopyrightYear()} BUILD BY
+              a(href="https://x.ai/bot" target="_blank" style={fontWeight: '300 !important'}) Grokbot
+              a(href="https://www.claude.ai/" target="_blank" style={fontWeight: '300 !important'}) Claude
+          div.footer-branding
+            - const imgStyle = { width: '80px', height: '80px' }
+            p(style={fontFamily: 'Quicksand', fontWeight: 500, letterSpacing: '0.13em', marginBottom: '6px' }) ©${getCopyrightYear()} BUILD BY
             a(href="https://www.mekaegwim.ca/" target="_blank" rel="noopener noreferrer"): img(
               src=${devLogoWhite}
               target="_blank"

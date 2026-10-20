@@ -1,29 +1,50 @@
-.slogan-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px; 
-    font-family: "Mozilla Headline", sans-serif !important;
-    font-size: 16px !important;
-    letter-spacing: 0.16em;
-    
+.slogan-box {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  .slogan-content-wrapper {
+    //max-width: 800px;
+    animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .slogan-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-bottom: 24px;
+
+    .text-gradient {
+      background: linear-gradient(180deg, #FFFFFF 0%, #A1A1AA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  .slogan-subtitle {
+    font-size: 1.25rem;
+    color: #A1A1AA;
+    line-height: 1.6;
+    max-width: 999px;
+    margin: 0 auto 40px auto;
+    font-weight: 400;
+    font-family: 'Quicksand';
+    letter-spacing: 0.13em;
+  }
+
+  .slogan-fade-line {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    margin-top: 40px;
+  }
 }
 
-.slogan-item{
-    padding: 20px;
-    margin: 10px;
-}
-
-.slogan-title{
-    text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-    letter-spacing: 0.21em;
-}
-
-.slogan-subtitle{
-    text-align: center;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0.21em;
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }

@@ -1,0 +1,203 @@
+.rd-page-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 100px 24px 160px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.rd-hero-section {
+  text-align: center;
+  
+  .rd-lead-text {
+    font-size: 1.5rem;
+    color: #dedede;
+    line-height: 1.5;
+    margin: 24px auto 0 auto;
+    font-weight: 400;
+    max-width: 800px;
+  }
+}
+
+.rd-philosophy-split {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+  background: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 64px;
+  backdrop-filter: blur(12px);
+
+  @media (max-width: 900px) {
+    flex-direction: column-reverse;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  .rd-text-column {
+    flex: 1;
+
+    .rd-subheading {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin: 0 0 24px 0;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      color: #888888;
+      font-size: 1.125rem;
+      line-height: 1.7;
+      margin-bottom: 24px;
+      text-align:justify;
+      
+      em {
+        color: #dedede;
+        font-style: italic;
+      }
+
+      &:last-child { margin-bottom: 0; }
+    }
+  }
+
+  .rd-graphic-column {
+    flex: 0 0 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .pedestal-glass {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(94, 92, 230, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5), inset 0 0 40px rgba(94, 92, 230, 0.05);
+      overflow: visible;
+    }
+  }
+}
+
+.rd-developer-section {
+  .text-center { text-align: center; }
+
+  .rd-social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Changed from 3 to 2 for a balanced 2x2 layout */
+  gap: 24px;
+
+  @media (max-width: 900px) { grid-template-columns: 1fr; }
+}
+
+  .rd-social-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(94, 92, 230, 0.4);
+      transform: translateY(-4px);
+
+      .icon-wrapper {
+        background: rgba(94, 92, 230, 0.15);
+        color: #5E5CE6;
+      }
+    }
+
+    .icon-wrapper {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #888888;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      .platform {
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #888888;
+        font-weight: 600;
+      }
+
+      .handle {
+        font-size: 1.125rem;
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+
+body.light-mode {
+  .rd-lead-text { color: #111111; }
+  
+  .rd-philosophy-split {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+
+    .rd-subheading { color: #111111; }
+    
+    p { 
+      color: #555555; 
+      em { color: #111111; }
+    }
+
+    .pedestal-glass {
+      border-color: rgba(0, 0, 0, 0.08);
+      background: radial-gradient(circle, rgba(94, 92, 230, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05), inset 0 0 40px rgba(94, 92, 230, 0.02);
+    }
+  }
+
+  .rd-developer-section {
+    .rd-social-card {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+
+      &:hover {
+        background: #fafafa;
+        border-color: rgba(94, 92, 230, 0.3);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+      }
+
+      .icon-wrapper {
+        background: rgba(0, 0, 0, 0.04);
+        color: #555555;
+      }
+      
+      &:hover .icon-wrapper {
+        background: rgba(94, 92, 230, 0.1);
+        color: #5E5CE6;
+      }
+
+      .platform { color: #666666; }
+      .handle { color: #111111; }
+    }
+  }
+}
