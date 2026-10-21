@@ -23,7 +23,7 @@ const AgenticAIView = () => {
                         Autonomous Orchestration<br/><span className="text-muted">& Goal-Oriented Systems</span>
                     </h1>
                     <p className="agentic-lead-text">
-                        Transition from reactive chatbots to proactive reasoning engines. Discover how Agentic AI leverages advanced foundation models to autonomously plan, adapt, and execute complex, multi-step workflows with strict enterprise safeguards.
+                        Transition from reactive chatbots to proactive reasoning engines. Agentic AI leverages advanced foundation models to autonomously plan, adapt, and execute complex, multi-step workflows with strict enterprise safeguards.
                     </p>
                 </section>
 
@@ -55,7 +55,7 @@ const AgenticAIView = () => {
                         <div className="course-card">
                             <div className="card-icon"><i className="fa-solid fa-shield-halved"></i></div>
                             <h3>Enterprise Applications</h3>
-                            <p style={{ textAlign: 'justify' }}>By delegating multi-step tasks to bespoke agentic AI systems, enterprises can radically scale operations. Use cases span from autonomous software generation and testing, to dynamic customer support resolution and real-time cybersecurity threat mitigation.</p>
+                            <p style={{ textAlign: 'justify' }}>By delegating multi-step tasks to bespoke agentic AI systems, enterprises can radically scale operations. Use cases span from autonomous software generation and testing, business process automation to dynamic customer support resolution and real-time cybersecurity threat mitigation.</p>
                         </div>
                     </div>
 

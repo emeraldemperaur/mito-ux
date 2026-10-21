@@ -3,7 +3,8 @@ import "@radix-ui/themes/styles.css";
 import './App.css';
 import { Box } from "@radix-ui/themes";
 import NavigationMenu from "./components/navMenu";
-import { Route, Routes } from "react-router-dom";
+import DripEffect from "./components/DripEffect";
+import { Route, Routes, useLocation } from "react-router-dom";
 import MaisonBase from './pages/maisonBaseView';
 import Documentation from './pages/documentationView';
 import RaisonDetre from './pages/raisonDetreView';
@@ -25,6 +26,7 @@ import { useTargetedInspectDeterrent } from "./hooks/useDisableInspect";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  const location = useLocation(); 
   useTargetedInspectDeterrent();
 
   useEffect(() => {
@@ -43,11 +45,20 @@ function App() {
     width="100%"
     px={{ initial: "3", md: "5" }}
     py={{ initial: "4", md: "6" }}
-    style={{ boxSizing: "border-box" }}
+    style={{ boxSizing: "border-box", overflowX: "clip" }} 
     >
-     <NavigationMenu isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
-     <ScrollToTop />
-     <Routes>
+      <NavigationMenu isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      {location.pathname === '/' && (
+        <div style={{ position: 'absolute', top: '70px', left: 0, right: 0, width: '100%', zIndex: 10 }}>
+          <DripEffect 
+            color={isDarkMode ? "#000000" : "#111111"} 
+            speed={0.5} 
+          />
+        </div>
+      )}
+
+      <ScrollToTop />
+      <Routes>
         <Route path='/' element={<MaisonBase darkMode={isDarkMode} />}/>
         <Route path='documentation' element={<Documentation/>}/>
         <Route path='components' element={<UIComponents darkMode={isDarkMode} />}/>

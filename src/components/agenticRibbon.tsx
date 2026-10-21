@@ -3,10 +3,11 @@ import '../styles/agenticRibbon.scss';
 import { NavLink } from 'react-router-dom';
 import replitLogo from '../assets/replit-logo.png';
 import windsurfLogo from '../assets/windsurf-icon-logo.png';
-import cognitionAILogo from '../assets/cognitionai-logo.png';
-import spaceXAILogo from '../assets/spacexai-logo-black.png';
+import spaceXAILogo from '../assets/cursor-icon.png';
 import grokbotLogo from '../assets/grokbot-logo.png';
-import claudeLogo from '../assets/claude-logo.png'; 
+import claudeLogo from '../assets/claude-logo.png';
+import googleLogo from '../assets/google-icon.webp'; 
+
 
 const AgenticRibbon = () => {
     return(
@@ -21,7 +22,7 @@ const AgenticRibbon = () => {
                     <AgenticCard imgSrc={windsurfLogo} agentName='Windsurf' productName='Cascade' url='https://www.windsurf.com/cascade'/>
                 </div>
                 <div className="agentic-item">
-                    <AgenticCard imgSrc={cognitionAILogo} agentName='Cognition' productName='Devin' url='https://www.devin.ai/'/>
+                    <AgenticCard imgSrc={googleLogo} agentName='Google' productName='Antigravity' url='https://antigravity.google'/>
                 </div>
                 <div className="agentic-item">
                     <AgenticCard imgSrc={replitLogo} agentName='Replit' productName='Agent3' url='https://www.replit.com/'/>
