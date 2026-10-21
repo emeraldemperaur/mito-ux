@@ -1,6 +1,6 @@
 import { NavLink  } from 'react-router-dom';
 import '../styles/main.scss';
-import BlobLogo from './blobLogo';
+import BlobLogo from './DripLogo';
 
 const NavigationMenu = ({ isDarkMode, toggleTheme }: { isDarkMode?: boolean, toggleTheme?: () => void }) => {
     //const navigator = useNavigate();
