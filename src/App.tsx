@@ -23,6 +23,7 @@ import MultimediaComponents from "./pages/multimediaComponentView";
 import InfoComponents from "./pages/infoComponentView";
 import ScrollToTop from "./components/ScrollToTop";
 import { useTargetedInspectDeterrent } from "./hooks/useDisableInspect";
+import NotFound from "./pages/NotFound";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -75,6 +76,7 @@ function App() {
         <Route path='getting-started' element={<GettingStarted/>}/>
         <Route path='faqs' element={<FAQs/>}/>
         <Route path='agentic-ai' element={<AgenticAI/>}/>
+        <Route path='*' element={<NotFound />} />
       </Routes>
       <CodexFooter/>
     </Box> 

@@ -50,7 +50,7 @@ const MitoMCP = () => {
                     <h2 className="display-heading" style={{fontSize: '2.5rem', marginBottom: '40px'}}>Core Architectural Features</h2>
                     <div className="architecture-grid">
                         <div className="arch-item">
-                            <h4>Seamless Clerk Authentication</h4>
+                            <h4>Seamless Authentication</h4>
                             <p>Utilizes PKCE to deliver a frictionless user experience, enabling secure credentialed access without complex security configurations.</p>
                         </div>
                         <div className="arch-item">
@@ -64,7 +64,7 @@ const MitoMCP = () => {
                     </div>
                 </section>
 
-                <section className="mcp-pricing-section">
+                <section id='mcp-pricing' className="mcp-pricing-section">
                     <div className="pricing-card-surface">
                         <div className="pricing-header">
                             <span className="pricing-badge">Commercial License</span>

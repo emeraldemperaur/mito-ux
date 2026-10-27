@@ -10,6 +10,10 @@ import promptLightLogo from '../assets/text-input.png';
 import promptDarkLogo from '../assets/text-input-white.png';
 import scssLogo from '../assets/scss-icon.png';
 import AgenticRibbon from "../components/agenticRibbon";
+import TsLogo from '../assets/typescript-icon.png'; 
+import WcagLogo from '../assets/wcag-icon.webp';     
+import McpDarkLogo from '../assets/mcp-dark-icon.png';
+import McpLightLogo from '../assets/mcp-light-icon.png';
 import '../styles/homePage.scss'; 
 
 const MaisonBase = ({ darkMode }: { darkMode: boolean }) => {
@@ -135,9 +139,15 @@ const MaisonBase = ({ darkMode }: { darkMode: boolean }) => {
                   </div>
                   <div className="security-content">
                     <div className="badges-row">
-                      <div className="badge">Strict Type Safety</div>
-                      <div className="badge">WCAG 2.1 AA</div>
-                      <div className="badge">Zero-Trust MCP</div>
+                      <div className="badge" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center' }}>
+                        <img src={TsLogo} alt="Strict Type Safety" style={{ height: '69px', width: 'auto', objectFit: 'contain' }} />
+                      </div>
+                      <div className="badge" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center' }}>
+                        <img src={WcagLogo} alt="WCAG 2.1 AA" style={{ height: '69px', width: 'auto', objectFit: 'contain' }} />
+                      </div>
+                      <div className="badge" style={{ padding: '8px 16px', display: 'flex', alignItems: 'center' }}>
+                        <img src={darkMode ? McpDarkLogo : McpLightLogo} alt="Zero-Trust MCP" style={{ height: '69px', width: 'auto', objectFit: 'contain' }} />
+                      </div>
                     </div>
                     <div className="security-grid">
                       <div className="security-item">Generated code is always your IP</div>
@@ -161,7 +171,7 @@ const MaisonBase = ({ darkMode }: { darkMode: boolean }) => {
                 </div>
               </section>
               <section className="agentic-footer-section">
-                <AgenticRibbon />
+                <AgenticRibbon darkMode={darkMode} />
               </section>
           </div>
         </main>

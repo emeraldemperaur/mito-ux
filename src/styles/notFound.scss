@@ -1,0 +1,134 @@
+.mito-404-section {
+  --drip-color: #111111;
+  --drip-bg: #ffffff;
+  position: relative;
+  height: calc(100vh - 200px); 
+  min-height: 550px; 
+  padding-bottom: 80px; 
+  
+  width: 100%;
+  background-color: var(--drip-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mito-404-container {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-filter: contrast(15);
+  filter: contrast(15);
+  background-color: var(--drip-bg); 
+  padding-bottom: 2rem;
+  z-index: 2;
+}
+
+.mito-404-text {
+  font-size: clamp(100px, 25vw, 280px);
+  font-family: "Mozilla Headline", "Montserrat", sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--drip-color);
+  margin: 0;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.mito-drip-one, .mito-drip-two, .mito-drip-three, .mito-drip-four {
+  background-color: var(--drip-color);
+  position: absolute;
+  border-radius: 50%;
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+}
+
+.mito-drip-one {
+  width: 0; height: 0;
+  top: 50%; left: 15%;
+  animation: mito-404-drip-1 2.5s ease infinite;
+}
+
+.mito-drip-two {
+  width: 0; height: 0;
+  top: 50%; left: 35%;
+  animation: mito-404-drip-2 5s ease infinite;
+}
+
+.mito-drip-three {
+  width: clamp(30px, 6vw, 60px); 
+  height: clamp(30px, 6vw, 60px);
+  top: -5%; left: 60%;
+}
+.mito-drip-active {
+  animation: mito-404-drip-3 4.2s ease forwards;
+}
+
+.mito-drip-four {
+  width: 0; height: 0;
+  top: 30%; left: 80%;
+  animation: mito-404-drip-4 2.5s ease infinite;
+  animation-delay: 0.25s;
+}
+
+.mito-404-actions {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--drip-color);
+  font-family: "Quicksand", sans-serif;
+  
+  h2 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  p { font-size: 1rem; opacity: 0.7; margin-bottom: 1.5rem; max-width: 600px; }
+}
+
+.mito-404-btn {
+  background: var(--drip-color);
+  color: var(--drip-bg);
+  border: none;
+  padding: 12px 24px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  
+  &:hover { opacity: 0.8; }
+}
+
+@keyframes mito-404-drip-1 {
+  0% { top: 50%; width: 0; height: 0; }
+  10%, 40% { width: clamp(20px, 5vw, 45px); height: clamp(25px, 6vw, 55px); }
+  50% { top: 60%; width: clamp(20px, 5vw, 45px); height: clamp(25px, 6vw, 55px); }
+  100% { top: 120vh; width: clamp(20px, 5vw, 45px); height: clamp(25px, 6vw, 55px); }
+}
+
+@keyframes mito-404-drip-2 {
+  0% { top: 20%; width: 0; height: 0; }
+  15% { width: clamp(25px, 6vw, 55px); height: clamp(30px, 7vw, 65px); }
+  50% { top: 60%; width: clamp(25px, 6vw, 55px); height: clamp(30px, 7vw, 65px); }
+  100% { top: 120vh; width: clamp(25px, 6vw, 55px); height: clamp(30px, 7vw, 65px); }
+}
+
+@keyframes mito-404-drip-3 {
+  0% { top: -5%; }
+  15% { top: 10%; width: clamp(30px, 6vw, 60px); height: clamp(35px, 7vw, 70px); }
+  50%, 60% { top: 55%; width: clamp(30px, 6vw, 60px); height: clamp(35px, 7vw, 70px); }
+  100% { top: 120vh; width: clamp(30px, 6vw, 60px); height: clamp(35px, 7vw, 70px); }
+}
+
+@keyframes mito-404-drip-4 {
+  0% { top: 30%; width: 0; height: 0; }
+  25% { top: 40%; width: clamp(20px, 5vw, 45px); height: clamp(30px, 7vw, 60px); }
+  50% { top: 45%; width: clamp(20px, 5vw, 45px); height: clamp(30px, 7vw, 60px); }
+  100% { top: 120vh; width: clamp(20px, 5vw, 45px); height: clamp(30px, 7vw, 60px); }
+}

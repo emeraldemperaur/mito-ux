@@ -1,34 +1,36 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import '../styles/agenticRibbon.scss';
 import { NavLink } from 'react-router-dom';
-import replitLogo from '../assets/replit-logo.png';
-import windsurfLogo from '../assets/windsurf-icon-logo.png';
-import spaceXAILogo from '../assets/cursor-icon.png';
-import grokbotLogo from '../assets/grokbot-logo.png';
+import replitLogo from '../assets/replit-icon.png';
+import windsurfLogoDark from '../assets/windsurf-dark-icon.png';
+import windsurfLogo from '../assets/windsurf-light-icon.png';
+import cursorLogo from '../assets/cursor-icon.png';
+import spaceXLightLogo from '../assets/spacex-light-icon.png';
+import spaceXDarkLogo from '../assets/spacex-dark-icon.png';
 import claudeLogo from '../assets/claude-logo.png';
-import googleLogo from '../assets/google-icon.webp'; 
+import antigravityLogo from '../assets/antigravity-icon.png'; 
 
 
-const AgenticRibbon = () => {
+const AgenticRibbon = ({ darkMode }: { darkMode: boolean }) => {
     return(
     <>
         <div className='agentic-card'>
             <p className="agentic-heading">Interested in unlocking the potential of Agentic AI? <NavLink to='agentic-ai'>Learn more</NavLink></p>
             <div className="agentic-container">
                 <div className="agentic-item">
-                    <AgenticCard imgSrc={spaceXAILogo} agentName='SpaceXSI' productName='Cursor' url='https://cursor.com/'/>
+                    <AgenticCard imgSrc={cursorLogo} agentName='SpaceXSI' productName='Cursor' url='https://cursor.com/'/>
                 </div>
                 <div className="agentic-item">
-                    <AgenticCard imgSrc={windsurfLogo} agentName='Windsurf' productName='Cascade' url='https://www.windsurf.com/cascade'/>
+                    <AgenticCard imgSrc={darkMode ? windsurfLogoDark : windsurfLogo} agentName='Windsurf' productName='Cascade' url='https://www.windsurf.com/cascade'/>
                 </div>
                 <div className="agentic-item">
-                    <AgenticCard imgSrc={googleLogo} agentName='Google' productName='Antigravity' url='https://antigravity.google'/>
+                    <AgenticCard imgSrc={antigravityLogo} agentName='Google' productName='Antigravity' url='https://antigravity.google'/>
                 </div>
                 <div className="agentic-item">
                     <AgenticCard imgSrc={replitLogo} agentName='Replit' productName='Agent3' url='https://www.replit.com/'/>
                 </div>
                 <div className="agentic-item">
-                    <AgenticCard imgSrc={grokbotLogo} agentName='SpaceXSI' productName='Grokbot' url='https://grok.com/'/>
+                    <AgenticCard imgSrc={darkMode ? spaceXDarkLogo : spaceXLightLogo} agentName='SpaceXSI' productName='Grok Build' url='https://x.ai/build'/>
                 </div>
                 <div className="agentic-item">
                     <AgenticCard imgSrc={claudeLogo} agentName='Anthropic' productName='Claude' url='https://claude.ai/'/>
